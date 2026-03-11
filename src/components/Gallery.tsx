@@ -1,20 +1,13 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import photo1 from "@/assets/photo-1.jpg";
-import photo2 from "@/assets/photo-2.jpg";
-import photo3 from "@/assets/photo-3.jpg";
-import photo4 from "@/assets/photo-4.jpg";
-import photo5 from "@/assets/photo-5.jpg";
-import photo6 from "@/assets/photo-6.jpg";
-
 const photos = [
-  { src: photo1, title: "Concrete Geometry", location: "Tokyo" },
-  { src: photo2, title: "Glass Ascent", location: "London" },
-  { src: photo3, title: "Light Corridor", location: "Osaka" },
-  { src: photo4, title: "Spiral Descent", location: "Berlin" },
-  { src: photo5, title: "Gallery Space", location: "New York" },
-  { src: photo6, title: "Steel Tension", location: "San Francisco" },
+  { src: "/lovable-uploads/ca5486da-4f1b-4aba-9a7c-670e929b8999.jpg", title: "Concrete Geometry", location: "Tokyo" },
+  { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "Glass Ascent", location: "London" },
+  { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "Light Corridor", location: "Osaka" },
+  { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Spiral Descent", location: "Berlin" },
+  { src: "/lovable-uploads/b12227cd-cf2d-4572-90de-951ffb713459.jpg", title: "Gallery Space", location: "New York" },
+  { src: "/lovable-uploads/e5b71382-0545-4150-9214-fc2b613f4f08.jpg", title: "Steel Tension", location: "San Francisco" },
 ];
 
 const Gallery = () => {
