@@ -8,6 +8,10 @@ const photos = [
   { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Spiral Descent", location: "Berlin" },
   { src: "/lovable-uploads/b12227cd-cf2d-4572-90de-951ffb713459.jpg", title: "Gallery Space", location: "New York" },
   { src: "/lovable-uploads/e5b71382-0545-4150-9214-fc2b613f4f08.jpg", title: "Steel Tension", location: "San Francisco" },
+  { src: "/lovable-uploads/bd8a2e7c-55ae-4960-a3a2-3771bcd755f3.jpg", title: "Urban Rhythm", location: "Paris" },
+  { src: "/lovable-uploads/0ea62c6e-3abb-437d-b4b9-0b073ed37f53.jpg", title: "Silent Frame", location: "Vienna" },
+  { src: "/lovable-uploads/3f51c793-b560-416d-94ae-b04dc981c46e.jpg", title: "Horizon Line", location: "Barcelona" },
+  { src: "/lovable-uploads/5215335e-baaa-4bbc-a12e-1ef85f795cf1.jpg", title: "Depth & Form", location: "Milan" },
 ];
 
 const Gallery = () => {
