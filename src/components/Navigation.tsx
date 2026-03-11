@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Sun, Moon } from "lucide-react";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
   const { scrollYProgress } = useScroll();
   const navOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0.85]);
 
@@ -11,6 +13,11 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleDark = () => {
+    document.documentElement.classList.toggle("dark");
+    setDark(!dark);
+  };
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -26,19 +33,26 @@ const Navigation = () => {
       <button onClick={() => scrollTo("hero")} className="heading-section text-foreground tracking-[0.4em] text-xs">
         Dear Mother 
       </button>
-      <div className="hidden md:flex items-center gap-10">
-        {["gallery", "writing", "about", "contact"].map((item) =>
+      <div className="flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-10">
+          {["gallery", "writing", "about", "contact"].map((item) =>
+          <button
+            key={item}
+            onClick={() => scrollTo(item)}
+            className="heading-section text-[10px] hover:text-foreground transition-colors duration-300">
+              {item}
+            </button>
+          )}
+        </div>
         <button
-          key={item}
-          onClick={() => scrollTo(item)}
-          className="heading-section text-[10px] hover:text-foreground transition-colors duration-300">
-          
-            {item}
-          </button>
-        )}
+          onClick={toggleDark}
+          className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+          aria-label="Toggle dark mode"
+        >
+          {dark ? <Sun size={14} strokeWidth={1.5} /> : <Moon size={14} strokeWidth={1.5} />}
+        </button>
       </div>
     </motion.nav>);
 
 };
-
 export default Navigation;
