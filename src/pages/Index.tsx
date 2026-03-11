@@ -19,9 +19,10 @@ const Index = () => {
         <Hero />
         <div className="thin-divider" />
         <Gallery />
-        <FeaturedCarousel />
         <div className="thin-divider" />
         <WritingSection />
+        <FeaturedCarousel />
+        <div className="thin-divider" />
         <div className="thin-divider" />
         <About />
         <div className="thin-divider" />
