@@ -1,16 +1,11 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import photo1 from "@/assets/photo-1.jpg";
-import photo3 from "@/assets/photo-3.jpg";
-import photo4 from "@/assets/photo-4.jpg";
-import photo6 from "@/assets/photo-6.jpg";
-
 const featured = [
-  { src: photo1, title: "Form & Shadow" },
-  { src: photo3, title: "Infinite Corridor" },
-  { src: photo4, title: "Descending Light" },
-  { src: photo6, title: "Structural Poetry" },
+  { src: "/lovable-uploads/ca5486da-4f1b-4aba-9a7c-670e929b8999.jpg", title: "Form & Shadow" },
+  { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "Infinite Corridor" },
+  { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Descending Light" },
+  { src: "/lovable-uploads/e5b71382-0545-4150-9214-fc2b613f4f08.jpg", title: "Structural Poetry" },
 ];
 
 const FeaturedCarousel = () => {
