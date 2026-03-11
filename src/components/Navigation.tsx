@@ -20,25 +20,25 @@ const Navigation = () => {
     <motion.nav
       style={{ opacity: navOpacity }}
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 lg:px-24 h-16 transition-all duration-500 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
-      }`}
-    >
+      scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`
+      }>
+      
       <button onClick={() => scrollTo("hero")} className="heading-section text-foreground tracking-[0.4em] text-xs">
-        LŪMEN
+        Dear Mother 
       </button>
       <div className="hidden md:flex items-center gap-10">
-        {["gallery", "writing", "about", "contact"].map((item) => (
-          <button
-            key={item}
-            onClick={() => scrollTo(item)}
-            className="heading-section text-[10px] hover:text-foreground transition-colors duration-300"
-          >
+        {["gallery", "writing", "about", "contact"].map((item) =>
+        <button
+          key={item}
+          onClick={() => scrollTo(item)}
+          className="heading-section text-[10px] hover:text-foreground transition-colors duration-300">
+          
             {item}
           </button>
-        ))}
+        )}
       </div>
-    </motion.nav>
-  );
+    </motion.nav>);
+
 };
 
 export default Navigation;
