@@ -30,8 +30,8 @@ const Navigation = () => {
       scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`
       }>
       
-      <button onClick={() => scrollTo("hero")} className="heading-section text-foreground tracking-[0.4em] text-xs">
-        Dear Mother 
+      <button onClick={() => scrollTo("hero")} className="heading-section text-foreground tracking-[0.4em] text-xs font-thin">
+        HELLO 
       </button>
       <div className="flex items-center gap-10">
         <div className="hidden md:flex items-center gap-10">
@@ -47,8 +47,8 @@ const Navigation = () => {
         <button
           onClick={toggleDark}
           className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-          aria-label="Toggle dark mode"
-        >
+          aria-label="Toggle dark mode">
+          
           {dark ? <Sun size={14} strokeWidth={1.5} /> : <Moon size={14} strokeWidth={1.5} />}
         </button>
       </div>
