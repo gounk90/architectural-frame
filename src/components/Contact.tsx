@@ -84,7 +84,7 @@ const Contact = () => {
           </div>
           <div>
             <p className="heading-section text-[10px] mb-3">Location</p>
-            <p className="text-sm font-light text-muted-foreground">Tokyo · Berlin</p>
+            <p className="text-sm font-light text-muted-foreground">London · Athens      </p>
           </div>
         </motion.div>
       </div>
