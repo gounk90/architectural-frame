@@ -16,8 +16,8 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
+        transition={{ duration: 0.8 }}>
+        
         <p className="heading-section mb-16">Contact</p>
       </motion.div>
 
@@ -28,23 +28,23 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           onSubmit={handleSubmit}
-          className="space-y-8"
-        >
+          className="space-y-8">
+          
           {[
-            { name: "name" as const, label: "Name", type: "text" },
-            { name: "email" as const, label: "Email", type: "email" },
-          ].map((field) => (
-            <div key={field.name}>
+          { name: "name" as const, label: "Name", type: "text" },
+          { name: "email" as const, label: "Email", type: "email" }].
+          map((field) =>
+          <div key={field.name}>
               <label className="heading-section text-[10px] block mb-3">{field.label}</label>
               <input
-                type={field.type}
-                value={formData[field.name]}
-                onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
-                className="w-full bg-transparent border-b border-border pb-2 text-sm font-light tracking-wide text-foreground focus:outline-none focus:border-foreground transition-colors duration-300 placeholder:text-muted-foreground/30"
-                required
-              />
+              type={field.type}
+              value={formData[field.name]}
+              onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
+              className="w-full bg-transparent border-b border-border pb-2 text-sm font-light tracking-wide text-foreground focus:outline-none focus:border-foreground transition-colors duration-300 placeholder:text-muted-foreground/30"
+              required />
+            
             </div>
-          ))}
+          )}
           <div>
             <label className="heading-section text-[10px] block mb-3">Message</label>
             <textarea
@@ -52,13 +52,13 @@ const Contact = () => {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={4}
               className="w-full bg-transparent border-b border-border pb-2 text-sm font-light tracking-wide text-foreground focus:outline-none focus:border-foreground transition-colors duration-300 resize-none placeholder:text-muted-foreground/30"
-              required
-            />
+              required />
+            
           </div>
           <button
             type="submit"
-            className="heading-section text-[10px] text-foreground hover:text-muted-foreground transition-colors duration-300 pt-4"
-          >
+            className="heading-section text-[10px] text-foreground hover:text-muted-foreground transition-colors duration-300 pt-4">
+            
             Send Message →
           </button>
         </motion.form>
@@ -68,18 +68,18 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="space-y-6"
-        >
+          className="space-y-6">
+          
           <div>
             <p className="heading-section text-[10px] mb-3">Email</p>
-            <a href="mailto:hello@lumen.studio" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300">
-              hello@lumen.studio
+            <a className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300" href="mailto:hello@gounaris.co.uk">
+              hello@gounaris.co.uk
             </a>
           </div>
           <div>
             <p className="heading-section text-[10px] mb-3">Instagram</p>
-            <a href="#" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300">
-              @lumen.studio
+            <a className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300" href="https://www.instagram.com/user_69821">
+              @user_69821
             </a>
           </div>
           <div>
@@ -88,8 +88,8 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Contact;
