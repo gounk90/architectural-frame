@@ -40,7 +40,7 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.7, delay: i * 0.1 }}
-            className={`gallery-image ${i === 0 || i === 5 ? "md:col-span-2 aspect-[2/1]" : "aspect-square"}`}
+            className={`gallery-image ${i === 0 || i === 5 ? "md:col-span-2 aspect-[2/1]" : i === 4 ? "lg:row-span-2 aspect-square lg:aspect-auto lg:h-full" : "aspect-square"}`}
             onClick={() => openLightbox(i)}
           >
             <img src={photo.src} alt={photo.title} loading="lazy" />
