@@ -24,7 +24,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="heading-section text-[10px] md:text-xs tracking-[0.5em]">
           
-          Architecture · Photography · Thoughts · IT · TECHNOLOGY
+          Architecture · IT · Photography      
 
 
 
@@ -65,59 +65,59 @@ const Hero = () => {
 
       <FloatingParticles />
     </section>);};const FloatingParticles = () => {const canvasRef = useRef<HTMLCanvasElement>(null);const mouseRef = useRef({ x: 0, y: 0 });useEffect(() => {const canvas = canvasRef.current;if (!canvas) return;const ctx = canvas.getContext("2d");if (!ctx) return;canvas.width = window.innerWidth;canvas.height = window.innerHeight;const particles = Array.from({ length: 40 }, () => ({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
-          size: Math.random() * 1.5 + 0.5
-        }));
+      size: Math.random() * 1.5 + 0.5
+    }));
 
-      const handleMouseMove = (e: MouseEvent) => {
-        mouseRef.current = { x: e.clientX, y: e.clientY };
-      };
-      window.addEventListener("mousemove", handleMouseMove);
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseRef.current = { x: e.clientX, y: e.clientY };
+    };
+    window.addEventListener("mousemove", handleMouseMove);
 
-      let animId: number;
-      const animate = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const style = getComputedStyle(document.documentElement);
-        const isDark = document.documentElement.classList.contains("dark");
-        const color = isDark ? "255,255,255" : "0,0,0";
+    let animId: number;
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const style = getComputedStyle(document.documentElement);
+      const isDark = document.documentElement.classList.contains("dark");
+      const color = isDark ? "255,255,255" : "0,0,0";
 
-        particles.forEach((p) => {
-          const dx = mouseRef.current.x - p.x;
-          const dy = mouseRef.current.y - p.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 200) {
-            p.vx += dx * 0.00003;
-            p.vy += dy * 0.00003;
-          }
-          p.x += p.vx;
-          p.y += p.vy;
-          p.vx *= 0.99;
-          p.vy *= 0.99;
-          if (p.x < 0) p.x = canvas.width;
-          if (p.x > canvas.width) p.x = 0;
-          if (p.y < 0) p.y = canvas.height;
-          if (p.y > canvas.height) p.y = 0;
+      particles.forEach((p) => {
+        const dx = mouseRef.current.x - p.x;
+        const dy = mouseRef.current.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 200) {
+          p.vx += dx * 0.00003;
+          p.vy += dy * 0.00003;
+        }
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vx *= 0.99;
+        p.vy *= 0.99;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
 
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${color}, 0.15)`;
-          ctx.fill();
-        });
-        animId = requestAnimationFrame(animate);
-      };
-      animate();
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color}, 0.15)`;
+        ctx.fill();
+      });
+      animId = requestAnimationFrame(animate);
+    };
+    animate();
 
-      const handleResize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
-      window.addEventListener("resize", handleResize);
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    window.addEventListener("resize", handleResize);
 
-      return () => {
-        cancelAnimationFrame(animId);
-        window.removeEventListener("mousemove", handleMouseMove);
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />;
 };
