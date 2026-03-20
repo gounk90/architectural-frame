@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="#" className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 hover:text-foreground transition-colors duration-300 font-light">
             Instagram
           </a>
-          <a href="mailto:hello@lumen.studio" className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 hover:text-foreground transition-colors duration-300 font-light">
+          <a className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 hover:text-foreground transition-colors duration-300 font-light" href="mailto:hello@gounaris.co.uk">
             Email
           </a>
         </div>
