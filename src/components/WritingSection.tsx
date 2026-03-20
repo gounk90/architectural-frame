@@ -13,7 +13,7 @@ const writings = [
   },
   {
     title: "Sky as a Material. ",
-    excerpt: "An ever-shifting void—limitless, intangible, yet grounding everything it surrounds.",
+    excerpt: "An ever-shifting void — shaping space, defining edges, grounding everything it surrounds.",
     date: "2025.12",
   },
   {
