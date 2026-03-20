@@ -6,7 +6,7 @@ const photos = [
   { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "Glass Ascent", location: "London" },
   { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "Light Corridor", location: "Osaka" },
   { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Spiral Descent", location: "Berlin" },
-  { src: "/lovable-uploads/b12227cd-cf2d-4572-90de-951ffb713459.jpg", title: "Gallery Space", location: "New York" },
+  { src: "/lovable-uploads/34fa979a-f140-49da-b3ef-6b9955d1ebfc.jpg", title: "Gallery Space", location: "New York" },
   { src: "/lovable-uploads/00764c86-d7f7-47fb-a18f-87d1e12728cd.jpg", title: "Steel Tension", location: "San Francisco" },
   { src: "/lovable-uploads/fd4c356c-245b-4608-96b3-8d303621a712.jpg", title: "Silent Frame", location: "Vienna" },
   { src: "/lovable-uploads/ec1b83a4-422b-4973-8456-8e6d0f0660eb.jpg", title: "Horizon Line", location: "Barcelona" },
