@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const writings = [
   {
-    title: "Concrete as a Material.",
+    title: "Concrete as a Material. ",
     excerpt: "A study in weight and permanence—where form resists time and silence settles into structure.",
     date: "2026.02",
   },
