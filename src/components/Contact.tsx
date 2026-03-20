@@ -77,9 +77,9 @@ const Contact = () => {
             </a>
           </div>
           <div>
-            <p className="heading-section text-[10px] mb-3">Instagram</p>
-            <a className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300" href="https://www.instagram.com/user_69821">
-              @user_69821
+            <p className="heading-section text-[10px] mb-3">Linkedin</p>
+            <a className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300" href="www.linkedin.com/in/kostas-gounaris">
+              ​Gounaris
             </a>
           </div>
           <div>
