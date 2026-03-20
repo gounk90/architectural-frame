@@ -20,7 +20,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-xl md:text-2xl font-extralight leading-relaxed tracking-wide text-foreground mb-8">
           
-          Lūmen is not an architectural photography studio and editorial space based between Tokyo and Berlin.
+          Stillness in Structure
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="editorial-text mb-8">
           
-          We believe in the quiet power of space — the interplay of light, material, and void. Our work explores architecture not as structure, but as experience. Every photograph is an attempt to hold a moment of stillness within the built environment.
+          Ultra-minimal black and white photography that distills architecture to its purest form—light, line, and silence. Work as an exploration of balance and restraint, where absence becomes as significant as presence.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="editorial-text">
           
-          Through photography and writing, we document the invisible dialogue between human intention and physical form — finding beauty in reduction, meaning in emptiness, and poetry in concrete.
+          Precise, almost analytical perspective to visual composition—seeking clarity, order, and quiet tension in every frame.
         </motion.p>
       </div>
     </section>);
