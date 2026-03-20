@@ -2,23 +2,23 @@ import { motion } from "framer-motion";
 
 const writings = [
   {
-    title: "On Silence in Concrete",
-    excerpt: "The most profound architecture speaks in whispers. A concrete wall, left bare, becomes a canvas for light — shifting, fleeting, eternal.",
+    title: "Concrete as a Material.",
+    excerpt: "A study in weight and permanence—where form resists time and silence settles into structure.",
     date: "2026.02",
   },
   {
-    title: "The Geometry of Absence",
-    excerpt: "What defines a space is not what fills it, but what has been deliberately removed. Emptiness is the architect's most powerful material.",
+    title: "Glass as a  Material. ",
+    excerpt: "A threshold between presence and absence—revealing, reflecting, and quietly distorting what lies beyond.",
     date: "2026.01",
   },
   {
-    title: "Cities After Rain",
-    excerpt: "Wet streets become mirrors. Every puddle holds a building upside down, reminding us that perspective is never fixed.",
+    title: "Sky as a Material. ",
+    excerpt: "An ever-shifting void—limitless, intangible, yet grounding everything it surrounds.",
     date: "2025.12",
   },
   {
-    title: "Light as Material",
-    excerpt: "Tadao Ando once said light is the origin of all being. In photography, we don't capture buildings — we capture the light that reveals them.",
+    title: "Light as a Material.",
+    excerpt: "The unseen architect—shaping space, defining edges, and giving meaning to what remains.",
     date: "2025.11",
   },
 ];
