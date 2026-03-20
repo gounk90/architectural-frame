@@ -116,7 +116,6 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext }: LightboxProps) => 
       />
 
       <div className="absolute bottom-8 text-center">
-        <p className="text-primary-foreground/80 text-xs tracking-[0.2em] font-light">{photos[index].title}</p>
         <p className="text-primary-foreground/40 text-[10px] tracking-[0.3em] mt-1 uppercase">{photos[index].location}</p>
       </div>
     </motion.div>
