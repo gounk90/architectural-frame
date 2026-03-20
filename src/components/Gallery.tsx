@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const photos = [
   { src: "/lovable-uploads/ca5486da-4f1b-4aba-9a7c-670e929b8999.jpg", title: "Concrete Geometry", location: "A" },
-  { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "Glass Ascent", location: "London" },
+  { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "Glass Ascent", location: "B" },
   { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "Light Corridor", location: "Osaka" },
   { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Spiral Descent", location: "Berlin" },
   { src: "/lovable-uploads/34fa979a-f140-49da-b3ef-6b9955d1ebfc.jpg", title: "Gallery Space", location: "New York" },
