@@ -16,6 +16,8 @@ const items = [...featured, ...featured];
 const SPEED = 0.5; // pixels per frame
 const ITEM_WIDTH = 420; // px per item including gap
 const GAP = 16;
+const FRICTION = 0.95; // momentum decay per frame
+const MIN_VELOCITY = 0.1; // stop threshold
 
 const FeaturedCarousel = () => {
   const [hovered, setHovered] = useState(false);
@@ -26,8 +28,33 @@ const FeaturedCarousel = () => {
   const dragStartOffset = useRef(0);
   const totalWidth = featured.length * (ITEM_WIDTH + GAP);
 
+  // Momentum tracking
+  const velocity = useRef(0);
+  const lastPointerX = useRef(0);
+  const lastPointerTime = useRef(0);
+  const isMomentum = useRef(false);
+
   useAnimationFrame(() => {
-    if (hovered || dragging) return;
+    if (dragging) return;
+
+    // Apply momentum after drag release
+    if (isMomentum.current) {
+      velocity.current *= FRICTION;
+      if (Math.abs(velocity.current) < MIN_VELOCITY) {
+        isMomentum.current = false;
+        velocity.current = 0;
+      } else {
+        let current = offsetX.get() + velocity.current;
+        if (current <= -totalWidth) current += totalWidth;
+        if (current > 0) current -= totalWidth;
+        offsetX.set(current);
+        return;
+      }
+    }
+
+    if (hovered) return;
+
+    // Normal auto-scroll
     let current = offsetX.get() - SPEED;
     if (current <= -totalWidth) current += totalWidth;
     offsetX.set(current);
@@ -35,16 +62,27 @@ const FeaturedCarousel = () => {
 
   const handlePointerDown = (e: React.PointerEvent) => {
     setDragging(true);
+    isMomentum.current = false;
+    velocity.current = 0;
     dragStartX.current = e.clientX;
     dragStartOffset.current = offsetX.get();
+    lastPointerX.current = e.clientX;
+    lastPointerTime.current = performance.now();
     (e.target as HTMLElement).setPointerCapture(e.pointerId);
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!dragging) return;
+    const now = performance.now();
+    const dt = now - lastPointerTime.current;
+    if (dt > 0) {
+      velocity.current = (e.clientX - lastPointerX.current) / Math.max(dt, 1) * 16; // normalize to ~per frame
+    }
+    lastPointerX.current = e.clientX;
+    lastPointerTime.current = now;
+
     const delta = e.clientX - dragStartX.current;
     let next = dragStartOffset.current + delta;
-    // wrap
     if (next <= -totalWidth) next += totalWidth;
     if (next > 0) next -= totalWidth;
     offsetX.set(next);
@@ -52,6 +90,11 @@ const FeaturedCarousel = () => {
 
   const handlePointerUp = () => {
     setDragging(false);
+    // Clamp velocity to reasonable range
+    velocity.current = Math.max(-30, Math.min(30, velocity.current));
+    if (Math.abs(velocity.current) > MIN_VELOCITY) {
+      isMomentum.current = true;
+    }
   };
 
   const openLightbox = useCallback((i: number) => {
