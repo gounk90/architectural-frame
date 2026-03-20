@@ -2,12 +2,12 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue, useAnimationFrame } from "framer-motion";
 
 const featured = [
-  { src: "/lovable-uploads/ca5486da-4f1b-4aba-9a7c-670e929b8999.jpg", title: "Form & Shadow" },
-  { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "Infinite Corridor" },
-  { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "Descending Light" },
-  { src: "/lovable-uploads/e5b71382-0545-4150-9214-fc2b613f4f08.jpg", title: "Structural Poetry" },
-  { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "Glass Ascent" },
-  { src: "/lovable-uploads/b12227cd-cf2d-4572-90de-951ffb713459.jpg", title: "Gallery Space" },
+  { src: "/lovable-uploads/ca5486da-4f1b-4aba-9a7c-670e929b8999.jpg", title: "" },
+  { src: "/lovable-uploads/26d91cda-11e4-4155-8376-49d44b1e1ffd.jpg", title: "" },
+  { src: "/lovable-uploads/90846b84-1bcf-4714-823a-3c9d1e2a6715.jpg", title: "" },
+  { src: "/lovable-uploads/e5b71382-0545-4150-9214-fc2b613f4f08.jpg", title: "" },
+  { src: "/lovable-uploads/8063bf0d-9c99-4c5a-8694-9601d9201b7e.jpg", title: "" },
+  { src: "/lovable-uploads/b12227cd-cf2d-4572-90de-951ffb713459.jpg", title: "" },
 ];
 
 // Duplicate for seamless loop
