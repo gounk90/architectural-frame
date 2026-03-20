@@ -18,7 +18,7 @@ const writings = [
   },
   {
     title: "Light as a Material.",
-    excerpt: "The unseen architect—shaping space, defining edges, and giving meaning to what remains.",
+    excerpt: "The unseen architect — limitless, intangible, yet, giving meaning to everything.",
     date: "2025.11",
   },
 ];
